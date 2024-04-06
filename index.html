@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="UTF-8">
-<title>結婚式のご案内</title>
-<style>
-    .center {
-        text-align: center;
-        line-height: 30px;
-    }
-    .right-align, .greeting {
-        display: block; /* ブロック要素として扱う */
-        margin: 0 auto; /* 中央寄せ */
-        text-align: right; /* 右寄せ */
-        width: 350px; /* 最大幅の設定 */
-    }
-    table.center-table {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    td.right-align-text {
-        text-align: right; /* 文字を右揃えに */
-        padding-right: 20px; /* 右端との間隔 */
-    }
-</style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>結婚式のご案内</title>
+        <!-- ビューポート設定を追加 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .center {
+                text-align: center;
+                line-height: 30px;
+            }
+            .right-align, .greeting {
+                display: block;
+                margin: 0 auto;
+                text-align: right;
+                width: 350px;
+            }
+            table.center-table {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            td.right-align-text {
+                text-align: right;
+                padding-right: 20px;
+            }
+            /* フォントサイズ調整 */
+            body {
+                font-size: 16px; /* ベースのフォントサイズ */
+            }
+            @media (max-width: 600px) {
+                body {
+                    font-size: 14px; /* スマホ用に少し小さめのフォントサイズに */
+                }
+                .right-align, .greeting {
+                    width: auto; /* スマホでは幅を自動調整 */
+                }
+            }
+        </style>
+        </head>
 <body>
 <div class="center">
     <p>拝啓 〇〇の候<br>
@@ -53,15 +67,3 @@
 </div>
 </body>
 </html>
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const queryParams = new URLSearchParams(window.location.search);
-        const accessKey = queryParams.get('accessKey');
-
-        if (accessKey !== '0gqh4g-088') {
-            document.body.innerHTML = '<p>アクセス権限がありません。</p>';
-        }
-    });
-</script>
