@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>結婚式のご案内</title>
+<style>
+    .center {
+        text-align: center;
+        line-height: 30px;
+    }
+    .right-align, .greeting {
+        display: block; /* ブロック要素として扱う */
+        margin: 0 auto; /* 中央寄せ */
+        text-align: right; /* 右寄せ */
+        width: 350px; /* 最大幅の設定 */
+    }
+    table.center-table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    td.right-align-text {
+        text-align: right; /* 文字を右揃えに */
+        padding-right: 20px; /* 右端との間隔 */
+    }
+</style>
+</head>
+<body>
+<div class="center">
+    <p>拝啓 〇〇の候<br>
+    皆様にはますますご清栄のこととお慶び申し上げます<br>
+    さてこのたび私たちは結婚式を挙げることになりました<br><br>
+    つきましては　挙式に続き　ささやかながら<br>
+    披露の小宴を催したく存じます<br><br>
+    おいそがしいところ誠に恐縮ではございますが<br>
+    是非ご出席くださいますようご案内申し上げます</p>
+    <p class="greeting">謹白</p>
+
+    日 時　2024年6月1日（土）<br>
+    <table class="center-table">
+        <tr><td class="right-align-text">受付</td><td>9時45分　開始</td></tr>
+        <tr><td class="right-align-text">挙式</td><td>11時00分　挙行</td></tr>
+        <tr><td class="right-align-text">披露宴</td><td>12時15分　開宴</td></tr>
+    </table>
+
+    <div><br>当日は10時15分までにお集まりいただきますよう<br>
+    御願い申し上げます<br><br>
+    場　所　　大阪天満宮　天満宮会館<br>
+    大阪市北区天神橋2丁目1番8号<br>
+    ０６−６３５１−００２５<br><br>
+    2024年4月吉日<br><br>
+    九鬼　利允<br>
+    堀江　寛子</div>
+</div>
+</body>
+</html>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const queryParams = new URLSearchParams(window.location.search);
+        const accessKey = queryParams.get('accessKey');
+
+        if (accessKey !== '0gqh4g-088') {
+            document.body.innerHTML = '<p>アクセス権限がありません。</p>';
+        }
+    });
+</script>
