@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
 
 <head>
     <meta charset="UTF-8">
@@ -7,9 +10,32 @@
     <!-- ビューポート設定を追加 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body {
+            font-family: "Noto Serif JP", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image: url('./images/green-image.png');
+            background-size: contain;
+            /* 画像全体を表示させる */
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            text-align: center;
+            color: white;
+            height: 180px;
+            /* ヘッダーの高さを設定 */
+        }
+
         .center {
             text-align: center;
             line-height: 30px;
+            padding: 0 20px 20px 20px;
         }
 
         .right-align,
@@ -37,37 +63,33 @@
             /* ベースのフォントサイズ */
         }
 
-        @media (max-width: 600px) {
-            body {
-                font-size: 14px;
-                /* スマホ用に少し小さめのフォントサイズに */
-            }
-
-            .right-align,
-            .greeting {
-                width: auto;
-                /* スマホでは幅を自動調整 */
-            }
-        }
-
         .footer {
             line-height: 20px;
+        }
+
+        @media (min-width: 768px) {
+            header {
+                height: 200px;
+                /* PC画面ではヘッダーの高さを縮める */
+            }
         }
     </style>
 </head>
 
 <body>
+    <header></header>
     <div class="center">
-        <p>拝啓 〇〇の候<br>
-            皆様にはますますご清栄のこととお慶び申し上げます<br>
+        <p style="margin: 0px">拝啓 初夏の候<br></p>
+        <p>皆様にはますますご清栄のこととお慶び申し上げます<br>
             さてこのたび私たちは結婚式を挙げることになりました<br><br>
             つきましては　挙式に続き　ささやかながら<br>
             披露の小宴を催したく存じます<br><br>
             おいそがしいところ誠に恐縮ではございますが<br>
-            是非ご出席くださいますようご案内申し上げます</p>
-        <p class="greeting">謹白</p>
+            是非ご出席くださいますようご案内申し上げます
+        </p>
+        <p>謹白</p>
 
-        日 時　2024年6月1日（土）<br>
+        <p>日 時　2024年6月1日（土）<br>
         <table class="center-table">
             <tr>
                 <td class="right-align-text">受付</td>
@@ -94,6 +116,9 @@
                 堀江　寛子
             </div>
         </div>
+    </div>
+    </div>
+    </div>
     </div>
 </body>
 
